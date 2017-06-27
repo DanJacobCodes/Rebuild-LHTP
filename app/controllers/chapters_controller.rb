@@ -6,8 +6,7 @@ class ChaptersController < ApplicationController
   end
 
   def new
-    @chapter = Chapter.find(params [:chapter_id])
-    @section = @chapter.sections.new
+    @chapter = Chapter.new
     render :new
   end
 
@@ -19,7 +18,6 @@ class ChaptersController < ApplicationController
   def create
     @chapter = Chapter.new(chapter_params)
     if @chapter.save
-      flash[:notice] = "Chapter successfully added!"
       redirect_to chapters_path
     else
       render :new
