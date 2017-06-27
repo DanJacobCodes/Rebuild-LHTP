@@ -1,9 +1,11 @@
-<h1>Sections</h1>
+<h1 class="well">Sections</h1>
 
-<ul>
-  <% @sections.each do |section| %>
-  <li><%= link_to section.name, section_path(section) %></li>
-  <% end %>
-</ul>
-
-<%= link_to "New Section", new_section_path %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><% @sections.each do |section| %></th>
+      <th class="list"><%= link_to section.name, section_path(section) %></th>
+      <% end %>
+    </tr>
+  </thead>
+</table>

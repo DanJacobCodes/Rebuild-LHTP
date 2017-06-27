@@ -1,4 +1,9 @@
-<h1><%= @section.name %></h1>
+<h1>
+  <%= @section.name %></h1>
+<h2>Relationship in Rails</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 
 <% if @section.lessons.any? %>
 <h4>Sections<% section.name %></h4>
@@ -6,11 +11,6 @@
     <% @section.lessons.each do |section| %>
     <li>
       <%= link_to section.name %>
-      <%= link_to "Edit Section", edit_section_lesson_path (@section, lesson) %>
-      <%= link_to "Delete" section_path(@section)
-                                        :data =>{:confirm => "Are you sure?",
-                                          :method => "delete"} %>
-
     </li>
     <% end %>
   </ul>
@@ -19,10 +19,5 @@
     No Sections yet
   </p>
   <% end %>
-
-  <p><%= link_to "Add a section", new_section_lesson_path(@section) %></p>
-<p><%= link_to "Delete Section", section_path(@section),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %></p>
 
 <p><%= link_to "Return to Sections", sections_path %></p>

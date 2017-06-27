@@ -7,6 +7,21 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <div class="navbar-class">
+  <div class="container">
+
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <ul class="nav navbar-nav">
+
+      <li><%=link_to "Chapters", chapters_path%></li>
+      <li><%=link_to "Sections", sections_path %></li>
+    </ul>
+
+
+  </div>
+</div>
 
   <body>
     <%= flash[:notice] %>
