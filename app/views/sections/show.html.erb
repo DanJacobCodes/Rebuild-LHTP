@@ -1,11 +1,11 @@
 <h1><%= @section.name %></h1>
 
 <% if @section.lessons.any? %>
-<h4>Sections in <% @section.name %></h4>
+<h4>Sections<% section.name %></h4>
   <ul>
     <% @section.lessons.each do |section| %>
     <li>
-      <%= section.name %>
+      <%= link_to section.name %>
       <%= link_to "Edit Section", edit_section_lesson_path (@section, lesson) %>
       <%= link_to "Delete" section_path(@section)
                                         :data =>{:confirm => "Are you sure?",

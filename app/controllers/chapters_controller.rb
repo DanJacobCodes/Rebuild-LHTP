@@ -12,6 +12,7 @@ class ChaptersController < ApplicationController
 
   def show
     @chapter = Chapter.find(params[:id])
+
     render :show
   end
 
@@ -25,12 +26,12 @@ class ChaptersController < ApplicationController
   end
 
   def edit
-    @chapter = Chapter.find(params [:id])
+    @chapter = Chapter.find(params[:id])
     render :edit
   end
 
   def update
-   @chapter = Chapter.find(params [:id])
+   @chapter = Chapter.find(params[:id])
    if @chapter.update(chapter_params)
      redirect_to chapters_path
    else
