@@ -1,0 +1,1 @@
+class LessonsController < ApplicationController
